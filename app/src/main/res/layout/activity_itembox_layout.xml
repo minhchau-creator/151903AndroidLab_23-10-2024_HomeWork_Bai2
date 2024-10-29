@@ -1,0 +1,70 @@
+<!-- activity_itembox_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:maxLines="2">
+
+    <TextView
+        android:id="@+id/tvSender"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
+    <!-- Thông tin tin nhắn (LinearLayout chứa các TextView) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edurila.com"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you looking to Learn Web Designing?"
+            android:maxLines="2"
+            android:textSize="16sp"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Phần hiển thị thời gian và sao -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="10dp">
+
+        <!-- Thời gian -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34 PM"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Ngôi sao (CheckBox thay thế ImageView cho ivStar) -->
+        <CheckBox
+            android:id="@+id/ivStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>
